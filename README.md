@@ -1,3 +1,3 @@
 # Monty interpreters
-A project on Stacks, Queues - LIFO, FIFO
-C programming
+A project on Stacks, Queues - LIFO, FIFO. 
+C programming.
