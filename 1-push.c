@@ -15,23 +15,28 @@ void my_push(stack_t **head, unsigned int counter)
 		for (; context.arg[j] != '\0'; j++)
 		{
 			if (context.arg[j] > 57 || context.arg[j] < 48)
-				is_digit = 1; } /*arg not a valid integer*/
+				is_digit = 1; /*arg not a valid integer*/
+		}
 		if (is_digit == 1)
-		{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+		{
+			fprintf(stderr, "L%d: usage: push integer\n", counter);
 			fclose(context.file);
 			free(context.content);
 			my_free_stack(*head);
-			exit(EXIT_FAILURE); }}
+			exit(EXIT_FAILURE);
+		}
+	}
 	else  /*invalid argument for "push"*/
-	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", counter);
 		fclose(context.file);
 		free(context.content);
 		my_free_stack(*head);
-		exit(EXIT_FAILURE); }
+		exit(EXIT_FAILURE);
+	}
 	n = atoi(context.arg);  /*Convert string arg to integer*/
 	if (context.lifi == 0)  /*Stack operation*/
 		my_addnode(head, n);
-	else   /*Queue operation*/
+	else					/*Queue operation*/
 		my_addqueue(head, n);
 }
-
