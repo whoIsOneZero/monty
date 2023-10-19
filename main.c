@@ -1,5 +1,5 @@
 #include "monty.h"
-bus_t context = {NULL, NULL, NULL, 0}; /*Initialization*/
+context_t context = {NULL, NULL, NULL, 0}; /*Initialization*/
 
 /**
 * main - program entry point for the Monty code interpreter
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	{
 		line_code = NULL;
 		read_line = getline(&line_code, &size, file);
-		context.line_code = line_code;
+		context.content = line_code;
 		line_num++;
 		if (read_line > 0) /*Read valid line of Monty code from file*/
 		{
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 		}
 		free(line_code);
 	}
-	free_stack(stack);
+	my_free_stack(stack);
 	fclose(file);
 return (0);
 }

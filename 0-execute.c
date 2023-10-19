@@ -12,7 +12,7 @@ int _execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	/*Array of opcode structures*/
 	instruction_t opst[] = {
 				{"push", my_push},
-				{"pall", mmy_pall},
+				{"pall", my_pall},
 				{NULL, NULL} /*By convention*/
 				};
 	unsigned int i = 0;  /*To iterate through the 'opst' array*/
@@ -35,7 +35,7 @@ int _execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	/*Line num. where unrecognized opcode was found and opcode itself*/
 		fclose(file); /*Close Monty file and release resources*/
 		free(content);
-		free_stack(*stack);
+		my_free_stack(*stack);
 		exit(EXIT_FAILURE); }
 	return (1);
 }
