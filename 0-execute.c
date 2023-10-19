@@ -19,8 +19,8 @@ int _execute(char *content, stack_t **top, unsigned int line_num, FILE *file)
 	char *op;  /*Store the opcode extracted from 'content'*/
 
 	op = strtok(content, " \n\t"); /*Tokenization for opcode*/
-	if (op && op[0] == '#')  /*# for comments*/
-		return (0);
+	if (op && op[0] == '#')
+		return (0);  /*Ignore all comments*/
 	context.arg = strtok(NULL, " \n\t");  /*Store arguments if any*/
 	while (opst[i].opcode && op) /*Valid opcode*/
 	{
