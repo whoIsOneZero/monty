@@ -13,6 +13,7 @@ int _execute(char *content, stack_t **top, unsigned int line_num, FILE *file)
 	instruction_t opst[] = {
 				{"push", my_push},
 				{"pall", my_pall},
+				{"pint", my_pint},
 				{NULL, NULL} /*By convention*/
 				};
 	unsigned int i = 0;  /*To iterate through the 'opst' array*/

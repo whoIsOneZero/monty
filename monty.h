@@ -76,5 +76,6 @@ void my_addqueue(stack_t **, int);
 void my_push(stack_t **, unsigned int);
 void my_pall(stack_t **, unsigned int);
 void my_queue(stack_t **, unsigned int);
+void my_pint(stack_t **, unsigned int);
 
 #endif  /*MONTY_HEAD*/
