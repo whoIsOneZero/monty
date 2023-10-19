@@ -1,7 +1,9 @@
 #ifndef MONTY_HEAD
 #define MONTY_HEAD
 
+#define  _GNU_SOURCE
 #include <stdio.h>
+
 #include <stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
