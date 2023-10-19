@@ -18,9 +18,9 @@ int _execute(char *content, stack_t **top, unsigned int line_num, FILE *file)
 	unsigned int i = 0;  /*To iterate through the 'opst' array*/
 	char *op;  /*Store the opcode extracted from 'content'*/
 
-	op = strtok(content, " \n\t"); /*Tokenization*/
-	if (op && op[0] == '#')
-		return (0);  /*Ignore all comments*/
+	op = strtok(content, " \n\t"); /*Tokenization for opcode*/
+	if (op && op[0] == '#')  /*# for comments*/
+		return (0);
 	context.arg = strtok(NULL, " \n\t");  /*Store arguments if any*/
 	while (opst[i].opcode && op) /*Valid opcode*/
 	{
