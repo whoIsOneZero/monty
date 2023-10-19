@@ -1,6 +1,15 @@
 #ifndef MONTY_HEAD
 #define MONTY_HEAD
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
+#include <ctype.h>
+
+
 /*---> Stack structure <---*/
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -35,6 +44,26 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/*---> PROGRAM CONTEXT <---*/
+/**
+ * struct context_s - holds relevant progam information
+ * @arg: ptr to string which holds argument. dd.
+ * @file: pointer to monty file
+ * @content: ptr to string containing the line content
+ * @lifi: flag to indicate change btn. stack & queue
+ * ... whether an operation should be performed in stack-like
+ * or queue-like manner
+ *
+ * Description: for sharing program values throughout (each file)
+ */
+typedef struct context_s
+{
+	char *arg;
+	FILE *file;
+	char *content;
+	int lifi;
+}  context_t;
+extern context_t context;  /*Global variable*/
 
 /*---> FUNCTION PROTOTYPES */
 
