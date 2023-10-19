@@ -66,12 +66,9 @@ typedef struct context_s
 extern context_t context;  /*Global variable*/
 
 /*---> FUNCTION PROTOTYPES */
-/* 
-char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
-ssize_t getstdin(char **lineptr, int file);
-char  *clean_line(char *content);
-*/
+int _execute(char *, stack_t **, unsigned int, FILE *);
 
-void f_push(stack_t **head, unsigned int number);
+void my_push(stack_t **, unsigned int);
+void my_pall(stack_t **, unsigned int);
 
 #endif  /*MONTY_HEAD*/
