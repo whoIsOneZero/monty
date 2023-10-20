@@ -82,4 +82,6 @@ void my_swap(stack_t **, unsigned int);
 void my_add(stack_t **, unsigned int);
 void my_nop(stack_t **, unsigned int);
 
+/* ****> Advanced <**** */
+void my_sub(stack_t **, unsigned int);
 #endif  /*MONTY_HEAD*/
