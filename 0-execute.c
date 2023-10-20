@@ -20,6 +20,7 @@ int _execute(char *content, stack_t **top, unsigned int line_num, FILE *file)
 				{"nop", my_nop},
 				{"sub", my_sub},
 				{"div", my_div},
+				{"mul", my_mul},
 				{NULL, NULL} /*By convention*/
 				};
 	unsigned int i = 0;  /*To iterate through the 'opst' array*/

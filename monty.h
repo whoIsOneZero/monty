@@ -85,5 +85,6 @@ void my_nop(stack_t **, unsigned int);
 /* ****> Advanced <**** */
 void my_sub(stack_t **, unsigned int);
 void my_div(stack_t **, unsigned int);
+void my_mul(stack_t **, unsigned int);
 
 #endif  /*MONTY_HEAD*/
